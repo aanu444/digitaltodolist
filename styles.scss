@@ -18,7 +18,7 @@ body{
 }
 
 div{
-    border:0px solid black;
+    border:1px solid black;
 }
 
 h1{
@@ -36,111 +36,47 @@ h1{
   
 
     .form-group{
-        display:flex;
         flex-basis:50%;
-        align-content:space-between;
         
-        input{
-            width:100%;
-            padding:10px;
-        }
+        
+        .img-date{
+            background:url("images/eveningbreeze.jpg") no-repeat center center fixed;
+            background-size:cover;
+            min-height:200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius:20px;
+            position:relative;
 
-        .add{
-            .material-icons{
-                display:flex;
-                background:#903f88;
-                cursor:pointer;
-                padding:10px;
-                margin-left:5px;
+            p{
+                font-weight:bolder;
+                font-size:1.2rem;
                 color:white;
+                position:absolute;
+                margin-top:170px;
+                margin-left:10px;
             }
+
+        }
+        
         }
 
-    }
 
-}
-
-    .container-0{
-        @include flex;
-        flex-wrap:row wrap;
-        justify-content:center;
-        align-items:center;
-        min-height:80px;
-        display:none;
-        
-        .pop-up{
+        .items{
             flex-basis:50%;
-            height:80px;
+            min-height:300px;
+            background-color:white;
 
-        ul{
-            list-style-type:none;
-           
-        
-
-        li {
-
-            margin:0;
-            padding:0;
-            display:flex;
-            margin:0;
-            padding:0;
-            align-items:center;
-            justify-content:space-between;
-            padding:15px;
-
-            .list{
-                display:flex;
             
-                input[type=checkbox]:before{
-                    position:relative;
-                    display:flex;
-                    padding:10px;
-                  
-                }
-
-                input[type=checkbox]:after{
-                    position:relative;
-                    display:flex;
-                    padding:10px;
-                }
-
-                input[type=checkbox]:checked:after{
-                    background:red;
-                }
-
-                label{
-                    position:relative;
-                    cursor:pointer;
-                }
-
-                label:before{
-                    content:" ";
-                    padding:8px;
-                    display:inline-block;
-                    position:relative;
-                    vertical-align:middle;
-                    border-radius:3px;
-                }
-
-                span{
-                    color:white;
-                    font-size:1.2rem;
-                    font-weight:bolder;
-                }
-            }
-
-            .remove{
-                color:white;
-            }
-            
-           .remove:hover{
-               color:red;
-               cursor:pointer;
-           } 
-
         }
 
+        .footer{
+            flex-basis:50%;
+            min-height:50px;
+            background-color:white;
+        }
     }
-    }
-}
+
+
+
+   
 
