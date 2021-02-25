@@ -1,44 +1,40 @@
+$(document).ready(function(){
+    const clear= $("#refresh");
+    const dateElement= $("#date");
+    const list = $("#list");
+    const input=$("#item");
+    const add=$(".add");
 
-//     $(".add").click(function(){
-//         let inputVal= $("#todo").val();
-//         let count=0;
-//         if (inputVal != " "){
-//         count++;
-//         $(".container-0").css("display", "flex");
-//         //$("#task").text(inputVal);
-//         $(".todo-list").append('<li><div class="list"><input type="checkbox" id="check"'+ count
-//          + ' name="check"><label for="check'+ count + '"></label><span id="task">'+ inputVal 
-//          + '</span></div><span class="remove"><i class="material-icons">delete</i></span></li>')
+    //Show today's date
+    const options={weekday:"long", month:"short", day:"numeric"};
+    const today=new Date();
 
-//         }
-//         $("#todo").val(" ")
-//     });
+    dateElement.text(today.toLocaleDateString("en-US", options));
+  
 
-//     $("#check").change(function(){
-//         alert("Yo");
-//         if($(this).is(":checked")){
-//             console.log("Are you done with this task?");
-//         }
-//         else if($(this).is(":not(:checked)")){
-//             console.log("This is not checked");
-//         }
-//     });
+    function firstFunc(toDo){
+      const text='<li class="item"><p><i class="material-icons">check_box_outline_blank</i> <span>'+toDo+'</span> <i class="material-icons" id="delete">delete</i></p></li>'; 
+     
+     list.append(text);
+    };
 
-//     $(".remove").click(function(){
-//         alert ("Are you sure you want to delete?")
-//     });
+    
+    $(add).click(function(){
+        firstFunc(input.value);
+        
+
+    }
+
+)
    
 
+   
+})
 
-// if (typeof jQuery == 'undefined') {  
-//     console.log("jQuery is loaded");  
-//     //or
-//     alert("jQuery is loaded");  
-// } else {
-//     console.log("jQuery is not loaded");
-//     //or
-//      alert("jQuery is not loaded"); 
-// }
+
+
+
+
 
 
 

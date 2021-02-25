@@ -13,7 +13,7 @@ body {
 }
 
 div {
-  border: 1px solid black;
+  border: 0px solid black;
 }
 
 h1 {
@@ -54,26 +54,101 @@ h1 {
   position: relative;
 }
 
+.container .form-group .img-date #ref {
+  display: block;
+  text-align: right;
+  margin-right: 5px;
+}
+
 .container .form-group .img-date p {
   font-weight: bolder;
   font-size: 1.2rem;
   color: white;
   position: absolute;
-  margin-top: 170px;
+  margin-top: 145px;
   margin-left: 10px;
 }
 
-.container .items {
+.container-0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+}
+
+.container-0 .items {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   min-height: 300px;
   background-color: white;
 }
 
-.container .footer {
+.container-0 .items ul {
+  list-style-type: none;
+}
+
+.container-0 .items ul span {
+  margin-left: 10px;
+  font-weight: bolder;
+  line-height: -10px;
+}
+
+.container-0 .items ul #delete {
+  margin-left: 50px;
+}
+
+.container-0 .items ul #delete:hover {
+  color: red;
+}
+
+.container-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+}
+
+.container-1 .foot {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  min-height: 50px;
   background-color: white;
+  margin-top: -50px;
+}
+
+.container-1 .foot #footer {
+  text-align: center;
+}
+
+.container-1 .foot #footer input {
+  border: 2px solid white;
+  border-bottom: 1px solid grey;
+  margin-left: 20px;
+  min-width: 100px;
+  color: #181929;
+}
+
+.container-1 .foot #footer span .add {
+  color: #181929;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
