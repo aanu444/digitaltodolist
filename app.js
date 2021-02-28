@@ -1,35 +1,41 @@
-$(document).ready(function(){
-    const clear= $("#refresh");
-    const dateElement= $("#date");
-    const list = $("#list");
-    const input=$("#item");
-    const add=$(".add");
+
+    const clear= document.getElementById("refresh");
+    const dateElement= document.getElementById("date");
+    const list = document.getElementById("list");
+    
+    const add=document.querySelector(".add");
 
     //Show today's date
     const options={weekday:"long", month:"short", day:"numeric"};
     const today=new Date();
 
-    dateElement.text(today.toLocaleDateString("en-US", options));
+    dateElement.innerHTML=today.toLocaleDateString("en-US", options);
   
+    
+    add.addEventListener("click", ()=>{
+        let input=document.getElementById("item").value;
+        
+        const text='<li class="item"><p><i class="material-icons check">check_box_outline_blank</i><span>' + input +'</span> <i class="material-icons" id="delete">delete</i></p></li>'; 
 
-    function firstFunc(toDo){
-      const text='<li class="item"><p><i class="material-icons">check_box_outline_blank</i> <span>'+toDo+'</span> <i class="material-icons" id="delete">delete</i></p></li>'; 
-     
-     list.append(text);
-    };
+        const position="beforeend";
+        list.insertAdjacentHTML(position, text);
 
     
-    $(add).click(function(){
-        firstFunc(input.value);
-        
+      
+    });
 
-    }
+    let check = document.querySelector(".check");
+    
 
-)
-   
+//     check.addEventListener("click", ()=>{
+//         console.log(check);
+//   })
 
-   
-})
+
+    
+    
+
+
 
 
 
